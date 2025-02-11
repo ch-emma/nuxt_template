@@ -16,55 +16,46 @@ await isLogged();
 
 // работа со стором
 const { userStore } = useStore();
+
 </script>
 
 <template>
-	<div>
-		<h1 class="show">
-			Главная страница (тайтл показывается только на десктопе)
-		</h1>
-		<ui-button
-			@click="() => {
-				useToast(
-					'Тестовое уведомление',
-				);
-			}"
-		>
-			Показать уведомление
-		</ui-button>
-		<ui-button
-			@click="() => {
-				useToast(
-					'Тестовое уведомление с ошибкой',
-					'destructive',
-				)
-			}"
-		>
-			Показать уведомление с ошибкой
-		</ui-button>
-		<ui-button
-			@click="() => {
-				userStore.changeName('ЛЕГЕНДА');
-			}"
-		>
-			Поменять имя пользователя
-		</ui-button>
-
-		Имя пользователя {{ userStore.name }}
-
+	<div class="show">
+		<app-header></app-header>
+		<app-attention></app-attention>
 		<!-- использование иконок -->
-		<icons-burger />
+		<!-- <icons-burger /> -->
 	</div>
 </template>
+
+<script>
+import Header from '@/components/header/header.vue'
+	import Attention from '@/components/attention/attention.vue'
+export default {
+	components: {
+		"app-header": Header,
+		"app-attention": Attention
+	}
+}
+</script>
 
 <style lang="scss">
 	.show
 	{
 		display: none;
-		color: $main;
-		font-size: 32px;
+		color: $darkblue;
+		font-family: 'Roboto', serif;
+		font-size: 14px;
+		font-weight: 400;
+		width: 1366px;
+		background-color: #F9F9FA;
 
 		@include mq($desktop)
+		{
+			display: block;
+		}
+
+		@include mq($mobile)
 		{
 			display: block;
 		}

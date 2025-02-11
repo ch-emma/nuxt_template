@@ -1,9 +1,20 @@
+import ToastProvider from "./components/ui-kit/toast/ToastProvider.vue";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: '2024-04-03',
 	devtools: { enabled: true },
 	css: ['reset-css/reset.css', '~/assets/scss/main.scss'],
-	modules: ['shadcn-nuxt', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/eslint', '@vee-validate/nuxt', '@nuxthq/studio'],
+	modules: ['shadcn-nuxt', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/eslint', '@vee-validate/nuxt', '@nuxthq/studio', '@nuxt/fonts'],
+
+	fonts: {
+		families: [
+		  {
+			name: 'Gosha Sans', provide: "google"
+		  }
+		]
+	  },
+
 	veeValidate: {
 		autoImports: true,
 		componentNames: {

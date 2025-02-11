@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
+    "@nuxt/fonts": "^0.10.3",
     "@nuxthq/studio": "^2.2.1",
     "@pinia/nuxt": "^0.5.1",
     "@vee-validate/nuxt": "^4.13.2",
