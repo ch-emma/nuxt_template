@@ -1,8 +1,8 @@
 <template>
-    <div class="receipts">
-        <div class="receipts__head">
+    <div class="readyForPublic">
+        <div class="readyForPublic__head">
             <div class="head__cell" rowspan="3">
-                <h3>Новые поступления</h3>
+                <h3>Готовятся к выходу</h3>
             </div>
                 <div class="head__cell"></div>
                 <div class="head__cell"></div>
@@ -14,13 +14,13 @@
                 
             </div>
         </div>
-        <div class="receipts__books">
+        <div class="readyForPublic__books">
                 <div class="books__cell">
-                    <img class="receipts__book" src="/public/image/receipts-book -1.jpg" alt="">
-                    <p class="receipts__book-genre popular__book-genre">Корпоративное право</p>
-                    <h4 class="receipts__book-title popular__book-title">Инвестирование: способы, риски, субъекты : монография</h4>
-                    <p class="receipts__book-author popular__book-author">Майфат А.В.</p>
-                    <p class="receipts__book-price popular__book-price">4 450 ₽</p>
+                    <img class="readyForPublic__book" src="/public/image/receipts-book -1.jpg" alt="">
+                    <p class="readyForPublic__book-genre popular__book-genre">Корпоративное право</p>
+                    <h4 class="readyForPublic__book-title popular__book-title">Инвестирование: способы, риски, субъекты : монография</h4>
+                    <p class="readyForPublic__book-author popular__book-author">Майфат А.В.</p>
+                    <p class="readyForPublic__book-price popular__book-price">4 450 ₽</p>
                     <div class="rating">
                         <div class="book__rating-evaluation"><img src="/public/image/receip-star.svg" alt="">4.9</div>
                         <div class="book__rating-recommend"><img src="/public/image/receip-class.svg" alt="">89% рекомендуют</div>
@@ -31,11 +31,11 @@
                 </div>
             </div>
             <div class="books__cell">
-                <img class="receipts__book" src="/public/image/receipts-book-2.jpg" alt="">
-                <p class="receipts__book-genre popular__book-genre">Договорное право</p>
-                <h4 class="receipts__book-title popular__book-title">Договор коммерческой концессии (франчайзинг). Граж...</h4>
-                <p class="receipts__book-author popular__book-author">Багдасарян А.Ф.</p>
-                <p class="receipts__book-price popular__book-price">372 ₽</p>
+                <img class="readyForPublic__book" src="/public/image/receipts-book-2.jpg" alt="">
+                <p class="readyForPublic__book-genre popular__book-genre">Договорное право</p>
+                <h4 class="readyForPublic__book-title popular__book-title">Договор коммерческой концессии (франчайзинг). Граж...</h4>
+                <p class="readyForPublic__book-author popular__book-author">Багдасарян А.Ф.</p>
+                <p class="readyForPublic__book-price popular__book-price">372 ₽</p>
                 <div class="rating">
                     <div class="book__rating-evaluation"><img src="/public/image/receip-star2.svg" alt="">4.9</div>
                     <div class="book__rating-recommend"><img src="/public/image/receip-class.svg" alt="">89% рекомендуют</div>
@@ -46,11 +46,11 @@
                 </div>
             </div>
             <div class="books__cell">
-                <img class="receipts__book" src="/public/image/receipts-book-3.jpg" alt="">
+                <img class="readyForPublic__book" src="/public/image/receipts-book-3.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Конкурентное право</p>
-                <h4 class="receipts__book-title popular__book-title">Договор коммерческой концессии (франчайзинг). Граж...</h4>
-                <p class="receipts__book-author popular__book-author">Башлаков-Николаев И.В.</p>
-                <p class="receipts__book-price popular__book-price"><span class="sale-price">984 ₽</span><span class="old-price">1 284 ₽</span><span class="benefit">Выгода 30%</span></p>
+                <h4 class="readyForPublic__book-title popular__book-title">Договор коммерческой концессии (франчайзинг). Граж...</h4>
+                <p class="readyForPublic__book-author popular__book-author">Башлаков-Николаев И.В.</p>
+                <p class="readyForPublic__book-price popular__book-price"><span class="sale-price">984 ₽</span><span class="old-price">1 284 ₽</span><span class="benefit">Выгода 30%</span></p>
                 <div class="rating">
                     <div class="book__rating-evaluation"><img src="/public/image/receip-star2.svg" alt="">4.9</div>
                     <div class="book__rating-recommend"><img src="/public/image/receip-class.svg" alt="">89% рекомендуют</div>
@@ -61,11 +61,11 @@
                 </div>
             </div>
             <div class="books__cell">
-                <img class="receipts__book" src="/public/image/receipts-book -1.jpg" alt="">
+                <img class="readyForPublic__book" src="/public/image/receipts-book -1.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Корпоративное право</p>
-                <h4 class="receipts__book-title popular__book-title">Инвестирование: способы, риски, субъекты : монография</h4>
-                <p class="receipts__book-author popular__book-author">Майфат А.В.</p>
-                <p class="receipts__book-price popular__book-price">450 ₽</p>
+                <h4 class="readyForPublic__book-title popular__book-title">Инвестирование: способы, риски, субъекты : монография</h4>
+                <p class="readyForPublic__book-author popular__book-author">Майфат А.В.</p>
+                <p class="readyForPublic__book-price popular__book-price">450 ₽</p>
                 <div class="rating">
                     <div class="book__rating-evaluation"><img src="/public/image/receip-star2.svg" alt="">4.9</div>
                     <div class="book__rating-recommend"><img src="/public/image/receip-class.svg" alt="">89% рекомендуют</div>
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </div>
-        <div class="receipts__more">
+        <div class="readyForPublic__more">
             <div class="more__cell">
                 <a href="#" class="more__cell-text">Показать все книги раздела</a>
             </div>
@@ -85,7 +85,7 @@
 </template>
 
 <style>
-    .receipts
+    .readyForPublic
     {
         display: table;
         max-width: 1140px;
@@ -95,7 +95,7 @@
         margin-bottom: 65px;
     }
 
-    .receipts__head
+    .readyForPublic__head
     {
         display: table-header-group;
         font-size: 20px;
@@ -143,12 +143,12 @@
     .head__cell-but:first-of-type:before{rotate: 135deg;}
     .head__cell-but:last-of-type:before{rotate: -45deg;}
 
-    .receipts__books
+    .readyForPublic__books
     {
         display: table-row;
     }
 
-    .receipts__book-title
+    .readyForPublic__book-title
     {
         display: inline-block;
         width: 223px;
@@ -214,7 +214,7 @@
         padding: 5px 10px;
     }
 
-    .receipts__book
+    .readyForPublic__book
     {
         margin: 0 auto 15px;
     }
@@ -310,7 +310,7 @@
         gap: 5px;
     }
 
-    .receipts__more
+    .readyForPublic__more
     {
         display: table-footer-group;
         position: relative;

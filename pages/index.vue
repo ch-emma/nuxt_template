@@ -23,6 +23,10 @@ const { userStore } = useStore();
 	<div class="show">
 		<app-header></app-header>
 		<app-attention></app-attention>
+		<app-bookreceipts></app-bookreceipts>
+		<app-newsletter></app-newsletter>
+		<app-readyforpublic></app-readyforpublic>
+		<app-widgets></app-widgets>
 		<!-- использование иконок -->
 		<!-- <icons-burger /> -->
 	</div>
@@ -30,11 +34,19 @@ const { userStore } = useStore();
 
 <script>
 import Header from '@/components/header/header.vue'
-	import Attention from '@/components/attention/attention.vue'
+import Attention from '@/components/attention/attention.vue'
+import BookReceipts from '@/components/receipts/bookReceipts.vue';
+import Newsletter from '~/components/newsletter/newsletter.vue';
+import ReadyForPublic from '~/components/readyforpublic/readyForPublic.vue';
+import Widgets from '~/components/widgets/widgets.vue';
 export default {
 	components: {
 		"app-header": Header,
-		"app-attention": Attention
+		"app-attention": Attention,
+		"app-bookreceipts": BookReceipts,
+		"app-newsletter": Newsletter,
+		"app-readyforpublic": ReadyForPublic,
+		"app-widgets": Widgets,
 	}
 }
 </script>
