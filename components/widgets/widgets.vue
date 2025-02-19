@@ -39,6 +39,7 @@
         margin: 0 auto;
         justify-content: space-between;
         gap: 30px;
+        margin-bottom: 30px;
     }
 
     .widgets__item

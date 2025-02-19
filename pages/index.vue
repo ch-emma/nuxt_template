@@ -27,6 +27,8 @@ const { userStore } = useStore();
 		<app-newsletter></app-newsletter>
 		<app-readyforpublic></app-readyforpublic>
 		<app-widgets></app-widgets>
+		<app-news></app-news>
+		<app-footer></app-footer>
 		<!-- использование иконок -->
 		<!-- <icons-burger /> -->
 	</div>
@@ -39,6 +41,8 @@ import BookReceipts from '@/components/receipts/bookReceipts.vue';
 import Newsletter from '~/components/newsletter/newsletter.vue';
 import ReadyForPublic from '~/components/readyforpublic/readyForPublic.vue';
 import Widgets from '~/components/widgets/widgets.vue';
+import News from '@/components/news/news.vue';
+import Footer from '@/components/footer/footer.vue';
 export default {
 	components: {
 		"app-header": Header,
@@ -47,6 +51,8 @@ export default {
 		"app-newsletter": Newsletter,
 		"app-readyforpublic": ReadyForPublic,
 		"app-widgets": Widgets,
+		"app-news": News,
+		"app-footer": Footer
 	}
 }
 </script>
@@ -54,12 +60,12 @@ export default {
 <style lang="scss">
 	.show
 	{
-		display: none;
+		display: block;
 		color: $darkblue;
 		font-family: 'Roboto', serif;
 		font-size: 14px;
 		font-weight: 400;
-		width: 1366px;
+		max-width: 1366px;
 		background-color: #F9F9FA;
 
 		@include mq($desktop)
