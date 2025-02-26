@@ -4,11 +4,11 @@
             <div class="action__slider"><img src="../../public/image/slider-image.png" alt="Slider"></div>
             <div class="action__offers">
                 <div class="offer">
-                    <p class="offers__cont"><span>Бесплатно</span> доставим ваш заказ при покупке от 2000 ₽</p>
+                    <p class="offers__cont"><span class="offer-vector">Бесплатно</span> доставим ваш заказ при покупке от 2000 ₽</p>
                     <img src="/public/image/offer-delivery.svg" alt="delivery">    
                 </div>
                 <div class="offer">
-                    <p class="offers__cont">Скидка <br>при регистрации до <span>15%</span></p>
+                    <p class="offers__cont">Скидка <br>при регистрации до <span class="offer-vector">15%</span></p>
                     <img src="/public/image/offer-sale.svg" alt="">
                 </div>
             </div>
@@ -26,6 +26,16 @@
                 <button class="popular__favour"><img src="/public/image/popular-favour.svg" alt="favour"></button>
             </div>
         </div>
+        <div class="action__offers-media">
+                <div class="offer">
+                    <p class="offers__cont"><span>Бесплатно</span> доставим ваш заказ при покупке от 2000 ₽</p>
+                    <img src="/public/image/offer-delivery.svg" alt="delivery">    
+                </div>
+                <div class="offer">
+                    <p class="offers__cont">Скидка <br>при регистрации до <span>15%</span></p>
+                    <img src="/public/image/offer-sale.svg" alt="">
+                </div>
+            </div>
     </div>
 </template>
 
@@ -50,16 +60,23 @@
         justify-content: space-between;
     }
 
+    .action__offers-media{display: none;}
+
     .offer
     {
         display: flex;
         justify-content: space-between;
+        flex-shrink: 0;
+        flex-grow: 1;
         align-items: center;
         max-width: 360px;
         max-height: 140px;
         padding: 33px 25px;
         border-radius: 5px;
     }
+
+        .offer:first-of-type .offer-vector{background: url(/public/image/offer-delivery-vector.svg) no-repeat; clip-path: none;}
+        .offer:last-of-type .offers__cont{background: url(/public/image/offer-sale-vector.svg) no-repeat;}
 
     .offer img
     {
@@ -77,11 +94,10 @@
 
     .offer:last-of-type p{color: #1C294DCC;}
 
-    .offer:first-of-type 
+    /* .offer:first-of-type .offers__cont 
     {
-        background: url(/public/image/offer-delivery-vector.svg) no-repeat;
         background-size: auto;
-        background-position: 14px 33px;
+        background-position: 14px 43px;
         
     }
 
@@ -90,7 +106,7 @@
         background: url(/public/image/offer-sale-vector.svg) no-repeat;
         background-size: auto;
         background-position: 20px 50px;
-    }
+    } */
 
     .offer:first-of-type{background-color: #6D378F;}
 
@@ -180,5 +196,54 @@
         border: 1px solid #EEEEEE;
         border-radius: 5px;
     }
+
+    @media (max-width: 1140px) {
+        .action__offers
+        {
+            display: block;
+        }   
+        
+        .offer{max-width: 100%;}
+
+        .offer:not(:last-child){margin-bottom: 20px;}
+
+        .offer:last-of-type .offers__cont {background-position: 180px 25px;}
+
+        .offer:first-of-type .offers__cont {background-position: 15px 44px;}
+    }
+
+     @media (max-width: 1024px) {
+        .content{padding: 0 90px; margin: 0 auto;}
+    }
+
+    @media (max-width: 968px) {
+        .attention{padding: 30px;}
+        .popular__cart{padding-left: 49px;}
+    }
+
+    @media (max-width: 768px) {
+        .attention
+        {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        .attention__popular
+        {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .action__offers{display: none;}
+
+        .action__offers-media{display: block;}
+        
+    }
+
+    @media (max-width: 520px) {
+        .attention{padding: 10px;}
+        
+    }
+
     
 </style>

@@ -39,6 +39,9 @@
 <style>
     .news
     {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         max-width: 1140px;
         margin: 0 auto;
         background-color: #ffffff;
@@ -99,7 +102,7 @@
     {
         display: flex;
         justify-content: space-between;
-        padding: 20px;
+        padding: 25px 20px;
     }
 
     .news__item
@@ -155,6 +158,11 @@
         border-radius: 5px;
         font-weight: 500;
         line-height: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .news__item:last-of-type{display: none;}
+        
     }
 
 </style>

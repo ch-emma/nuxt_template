@@ -67,6 +67,7 @@ export default {
 		font-weight: 400;
 		max-width: 1366px;
 		background-color: #F9F9FA;
+		margin: 0 auto;
 
 		@include mq($desktop)
 		{

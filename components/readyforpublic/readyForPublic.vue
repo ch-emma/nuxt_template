@@ -4,8 +4,6 @@
             <div class="head__cell" rowspan="3">
                 <h3>Готовятся к выходу</h3>
             </div>
-                <div class="head__cell"></div>
-                <div class="head__cell"></div>
             <div class="head__cell">
                 <div class="head__cell-butscroll">
                     <button class="head__cell-but" value=""></button>
@@ -30,6 +28,7 @@
                         <button class="book__favour-btn"><img src="/public/image/favorites.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="readyForPublic__book" src="/public/image/receipts-book-2.jpg" alt="">
                 <p class="readyForPublic__book-genre popular__book-genre">Договорное право</p>
@@ -45,6 +44,7 @@
                     <button class="book__favour-btn"><img src="/public/image/popular-favour.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="readyForPublic__book" src="/public/image/receipts-book-3.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Конкурентное право</p>
@@ -60,6 +60,7 @@
                     <button class="book__favour-btn"><img src="/public/image/popular-favour.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="readyForPublic__book" src="/public/image/receipts-book -1.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Корпоративное право</p>
@@ -77,9 +78,7 @@
             </div>
         </div>
         <div class="readyForPublic__more">
-            <div class="more__cell">
                 <a href="#" class="more__cell-text">Показать все книги раздела</a>
-            </div>
         </div>
     </div>
 </template>
@@ -87,17 +86,20 @@
 <style>
     .readyForPublic
     {
-        display: table;
+        display: flex;
+        flex-direction: column;
         max-width: 1140px;
         margin: 0 auto;
         background-color: #ffffff;
         border-collapse: collapse;
-        margin-bottom: 65px;
+        margin-bottom: 30px;
     }
 
     .readyForPublic__head
     {
-        display: table-header-group;
+        display: flex;
+        justify-content: space-between;
+        padding: 17px 26px 12px;
         font-size: 20px;
         font-weight: 700;
         line-height: 25px;
@@ -107,19 +109,29 @@
 
     .head__cell
     {
-        display: table-cell;
-        padding: 15px 39px;
+        display: flex;
         vertical-align: middle;
     }
 
     .head__cell-but{
         position: relative;
         border: 1px solid #1C294D26;
-        border-radius: 5px;
         padding: 10px;
         width: 30px;
         height: 30px;
         text-align: right;
+    }
+
+    .head__cell-but:first-child
+    {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    .head__cell-but:last-child
+    {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
     .head__cell-butscroll
@@ -145,7 +157,7 @@
 
     .readyForPublic__books
     {
-        display: table-row;
+        display: flex;
     }
 
     .readyForPublic__book-title
@@ -160,14 +172,15 @@
 
     .books__cell
     {
-        display: table-cell;
+        display: block;
         position: relative;
-        border: 1px solid #1C294D26;
-        padding: 25px 34px;
+        margin-left: 15px;
+        margin-right: 14px;
+        padding: 26px 20px 20px ;
     }
 
-    .books__cell:nth-child(4n){border-right: none;}
-    .books__cell:nth-child(4n+1){border-left: none;}
+    .books__cell:first-child{margin-left: 0;}
+    .books__cell:last-child{margin-right: 0;}
 
     .books__cell:nth-child(1)::before, .books__cell:nth-child(4)::before
     {
@@ -312,23 +325,65 @@
 
     .readyForPublic__more
     {
-        display: table-footer-group;
-        position: relative;
         width: 100%;
+        padding: 10px;
         font-size: 14px;
         line-height: 20px;
         font-weight: 500;
         color: #1C294D;
+        text-align: center;
     }
 
-    .more__cell
-    {
-        display: table-cell;
-        position: absolute;
-        width: 100%;
-        column-span: all;
-        text-align: center;
-        padding: 5px;
+    @media (max-width: 1140px) {
+        .readyForPublic
+        {
+            margin: 0 auto;
+        }
+        
+        .books__cell:last-child{display: none;}        
+    }
+
+    @media (max-width: 1024px) {
+        .readyForPublic
+        {
+            margin: 0 auto;
+        }
+
+        .readyForPublic__books{justify-content: space-between;}
+
+        .books__cell:last-of-type, 
+        .vertical-line:last-of-type
+        {display: none;}
+    }
+
+    @media (max-width: 768px) {
+        .readyForPublic
+        {
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .readyForPublic
+        {
+            padding: 10px;
+        }
+
+        .books__cell{
+            padding-left: 10px;
+            max-width: 260px;
+            padding-right: 10px;
+            white-space: wrap;
+        }
+
+        .books__cell:first-child{
+            margin-right: 10px;}
+    }
+
+    @media (max-width: 320px) {
+        .books__cell:nth-of-type(2) 
+        .vertical-line:nth-of-type(2)
+        {display: none;}
     }
 
 </style>

@@ -4,8 +4,6 @@
             <div class="head__cell" rowspan="3">
                 <h3>Новые поступления</h3>
             </div>
-                <div class="head__cell"></div>
-                <div class="head__cell"></div>
             <div class="head__cell">
                 <div class="head__cell-butscroll">
                     <button class="head__cell-but" value=""></button>
@@ -30,6 +28,7 @@
                         <button class="book__favour-btn"><img src="/public/image/favorites.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="receipts__book" src="/public/image/receipts-book-2.jpg" alt="">
                 <p class="receipts__book-genre popular__book-genre">Договорное право</p>
@@ -45,6 +44,7 @@
                     <button class="book__favour-btn"><img src="/public/image/popular-favour.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="receipts__book" src="/public/image/receipts-book-3.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Конкурентное право</p>
@@ -60,6 +60,7 @@
                     <button class="book__favour-btn"><img src="/public/image/popular-favour.svg" alt="favour"></button>
                 </div>
             </div>
+            <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="receipts__book" src="/public/image/receipts-book -1.jpg" alt="">
                 <p class="popular__book-genre popular__book-genre">Корпоративное право</p>
@@ -77,9 +78,7 @@
             </div>
         </div>
         <div class="receipts__more">
-            <div class="more__cell">
                 <a href="#" class="more__cell-text">Показать все книги раздела</a>
-            </div>
         </div>
     </div>
 </template>
@@ -87,17 +86,21 @@
 <style>
     .receipts
     {
-        display: table;
+        display: flex;
+        flex-direction: column;
         max-width: 1140px;
         margin: 0 auto;
         background-color: #ffffff;
         border-collapse: collapse;
-        margin-bottom: 65px;
+        margin-bottom: 30px;
     }
 
     .receipts__head
     {
-        display: table-header-group;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 25px;
         font-size: 20px;
         font-weight: 700;
         line-height: 25px;
@@ -107,8 +110,6 @@
 
     .head__cell
     {
-        display: table-cell;
-        padding: 15px 39px;
         vertical-align: middle;
     }
 
@@ -145,7 +146,9 @@
 
     .receipts__books
     {
-        display: table-row;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #1C294D26;
     }
 
     .receipts__book-title
@@ -157,17 +160,18 @@
         text-overflow: ellipsis;
         margin-bottom: 3px;
     }
-
-    .books__cell
+/* 
+    .books__cell:not(:last-child)
     {
-        display: table-cell;
         position: relative;
-        border: 1px solid #1C294D26;
-        padding: 25px 34px;
+    } */
+
+    .vertical-line{
+        border-right: 1px solid #1C294D26;
     }
 
-    .books__cell:nth-child(4n){border-right: none;}
-    .books__cell:nth-child(4n+1){border-left: none;}
+    /* .books__cell:nth-child(4n){border-right: none;}
+    .books__cell:nth-child(4n+1){border-left: none;} */
 
     .books__cell:nth-child(1)::before, .books__cell:nth-child(4)::before
     {
@@ -312,23 +316,60 @@
 
     .receipts__more
     {
-        display: table-footer-group;
-        position: relative;
         width: 100%;
+        padding: 10px;
         font-size: 14px;
         line-height: 20px;
         font-weight: 500;
         color: #1C294D;
+        text-align: center;
     }
 
-    .more__cell
-    {
-        display: table-cell;
-        position: absolute;
-        width: 100%;
-        column-span: all;
-        text-align: center;
-        padding: 5px;
+    @media (max-width: 1140px) {
+        .books__cell:last-child{display: none;}        
+    }
+
+    @media (max-width: 1024px) {
+        .content{padding: 0 75px; margin: 0 auto;}
+
+        .books__cell:last-of-type, .vertical-line:last-of-type{display: none;}
+
+        .receipts
+        {
+            display: flex;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .receipts
+        {
+            display: flex;
+            padding: 30px 30px;
+            margin: 0 auto;
+        }
+
+        .books__cell:nth-last-of-type(3){display: none;}
+        .books__cell:nth-last-of-type(3) + .vertical-line{display: none;}
+
+    }
+
+    @media (max-width: 520px) {
+
+        .receipts{padding: 10px;}
+
+        .books__cell
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .vertical-line{display: none;}
+    }
+
+    @media (max-width: 320px) {
+        .books__cell:nth-of-type(2){display: none;}
+        .books__cell:nth-of-type(2) + .vertical-line{display: none;}
     }
 
 </style>

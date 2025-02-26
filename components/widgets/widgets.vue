@@ -40,6 +40,7 @@
         justify-content: space-between;
         gap: 30px;
         margin-bottom: 30px;
+        flex-wrap: wrap;
     }
 
     .widgets__item
@@ -86,4 +87,26 @@
         background: url('/public/image/widget-large-selection.svg') #FFFFFF no-repeat left 27px;
         padding: 40px 20px 42px 90px;
         }   
+
+
+        @media (max-width: 1140px) {
+            .widgets
+            {
+                justify-content: space-evenly;
+                padding: 30px 55px;
+            }
+            
+        }
+
+        @media (max-width: 768px) {
+            .widgets
+            {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            
+        }
+
+        
 </style>

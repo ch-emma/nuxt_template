@@ -32,8 +32,8 @@
         font-size: 18px;
         font-weight: 500;
         line-height: 20px;
-        white-space: nowrap;
         margin-right: 14px;
+        white-space: nowrap;
     }
 
     .form__email
@@ -56,4 +56,40 @@
         line-height: 20px;
         font-weight: 500;
     }
+
+    @media (max-width: 968px) {
+        .newsletter{background-position: 100px 28px;}
+
+        .newsletter form
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }   
+
+        .form__label{white-space: wrap;}
+
+        .form__but-subscribe{width: 100%;}
+    }
+
+    @media (max-width: 520px) {
+        .newsletter
+        {
+            padding: 20px;
+            margin-bottom: 0;
+        }
+        .newsletter form 
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form__label
+        {
+            max-width: 335px;
+        }
+
+        .form__but-subscribe{width: 100%;}
+    }  
 </style>

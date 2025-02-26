@@ -16,6 +16,7 @@
             <hr>
 			<div class="header__navigation">
                 <div class="header__nav">
+                    <a href="#" class="header__burger"><img src="/public/image/katalog.svg" alt=""></a>
                     <a href="#" class="logotype"><img src="../../public/image/statut-logo.svg" alt="Statut.ru"></a>
                     <div class="header_nav-search">
                         <input type="text" name="search" placeholder="Автор, название, ISBN">
@@ -23,12 +24,15 @@
                     </div>
                     <div class="header__nav-user-block">
                         <a href="#" class="header__favorites">Отложено</a>
+                        <a href="#" class="header__favorites header__favorites-media"></a>
                         <a href="#" class="header__signin">Войти</a>
+                        <a href="#" class="header__signin header__signin-media"></a>
                         <a href="#" class="header__cart">Корзина</a>
+                        <a href="#" class="header__cart header__cart-media"></a>
                     </div>
                 </div>
                 <div class="header__menu">
-                    <nav class="header__nav">
+                    <nav class="header__nav-menu">
                         <ul class="nav__menu">
                             <li class="nav__link katalog">Каталог</li>
                             <li class="nav__link">Авторы</li>
@@ -51,7 +55,7 @@
         padding: 0 113px;
         background-color: #fff;
     }
-    
+
 	hr{
         position: absolute;
         color: #DFE0E1;
@@ -127,9 +131,14 @@
         display: flex;
     }
 
+    .header__nav-menu{display: flex;}
+
     .logotype{
-        margin-right: 30px;
+        min-width: 43.75px;
+        margin-right: 30px; 
     }
+
+    .header__burger{display: none;}
 
     .header_nav-search{
         display: flex;
@@ -140,7 +149,7 @@
         padding-left: 15px;
     }
 
-    .header_nav-search button{
+    .btn-search{
         display: flex;
         padding: 10px 23px;
         background-color: #FF7A00;
@@ -155,18 +164,17 @@
 
     .header__nav-user-block{
         display: flex;
-        text-align: right;
+        gap: 33px;
         align-items: center;
-        margin: auto;
-        margin-right: 0;
-    }
-
-    .header__nav-user-block a:not(:last-child)
-    {
-        margin-right: 30px;
+        margin-left: auto;
     }
 
     .header__nav-user-block a{padding-left: 23px;}
+
+    .header__cart-media,
+    .header__signin-media,
+    .header__favorites-media
+    {display: none;}
 
     .header__favorites{background: url('/public/image/favorites.svg') no-repeat left center;}
     .header__signin{background: url('/public/image/signIn.svg') no-repeat left center;}
@@ -216,5 +224,96 @@
         background: url('/public/image/sale.svg') no-repeat left center;
         color: #FF283D;
         padding-left: 25px;
+    }
+
+    @media (max-width: 1140px) {
+        .content{padding: 0 90px; margin: 0 auto;}
+    }
+
+    @media (max-width: 1024px) {
+        .content{padding: 0 75px; margin: 0 auto;}
+        .header__contact div div a
+        {
+            text-align: center;
+            padding: 25px 0;
+            background-position: top center;
+        }
+    }
+
+    @media (max-width: 870px) {
+        .header_nav-search button {display: none;}
+
+        .header_nav-search
+        {
+            position: relative;
+            background-color: #f7f7f7;
+            color: #1C294D80;
+        }
+
+        .header_nav-search input
+        {
+            background-color: #f7f7f7;
+        }
+
+        .header_nav-search::before
+        {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            right: 10px;
+            background: url('/public/image/header-serach-media.svg') no-repeat;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content{padding: 0 50px; margin: 0 auto;}
+
+        .header__nav
+        {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logotype{margin: 0;}
+
+        .header__contact,
+        .header__favorites, 
+        .header__signin,
+        .header__cart{display: none;}
+        
+        .header__favorites-media,
+        .header__signin-media,
+        .header__cart-media
+        {
+            display: block;
+            width: 20px;
+            height: 20px;
+        } 
+            
+        .header__cart-media{background: url('/public/image/cart.svg') no-repeat left center;}
+        .header__favorites-media{background: url('/public/image/favorites.svg') no-repeat left center;}
+        .header__signin-media{background: url('/public/image/signIn.svg') no-repeat left center;}
+    }
+
+    @media (max-width: 600px) {
+        .header__favorites-media,
+        .header__signin-media{display: none;}   
+        
+        .header__menu{display: none;}
+
+        .header__nav{gap: 10px;}
+
+        .header__burger{display: flex; width: 35px;}
+    }
+
+    @media (max-width: 520px) {
+        .content{padding: 0 10px; margin: 0 auto;}
+    }
+    
+    @media (max-width: 320px) {
+        .content{padding: 0 10px;}        
     }
 </style>
