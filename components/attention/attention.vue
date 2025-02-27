@@ -213,7 +213,7 @@
     }
 
      @media (max-width: 1024px) {
-        .content{padding: 0 90px; margin: 0 auto;}
+        .attention{padding: 0 90px; margin: 0 auto;}
     }
 
     @media (max-width: 968px) {
@@ -245,5 +245,26 @@
         
     }
 
+    @media (max-width: 375px) {
+        .attention__popular{padding: 14px 20px 0;}
+        .time{top: 12px;}
+        .popular__book{max-width: 133px;}
+        .popular__button{justify-content: space-between;}
+        .popular__cart
+        {
+            flex-grow: 1;
+            padding: 13px 25px 11px 55px;
+            background-position: 84px center;
+        }
+        .popular__favour
+        {
+            width: 40px;
+            flex-shrink: 0;
+        }
+
+        .offer:not(:last-child){margin-bottom: 10px;}
+
+        .offer{padding: 33px 20px;}
+    }
     
 </style>

@@ -313,7 +313,18 @@
         .content{padding: 0 10px; margin: 0 auto;}
     }
     
-    @media (max-width: 320px) {
-        .content{padding: 0 10px;}        
+    @media (max-width: 375px) {
+        .content{padding: 0 20px;} 
+        
+        .header__nav{gap: 15px;}
+
+        .header__navigation{padding: 17px 0;}
+
+        .header__burger
+        {
+            min-width: 20px;
+        }
+        .logotype{margin-right: 5px;}
+        .header_nav-search::before{right: 17px;}
     }
 </style>

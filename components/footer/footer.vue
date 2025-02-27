@@ -448,5 +448,35 @@
     {
         padding: 20px;
     }
+
+    @media (max-width: 375px) 
+    {
+        .footer{padding-top: 24px;}
+        .footer__form{padding: 20px;}
+        .footer-email{min-width: 270px;}
+        .footer__social{margin: 0 93px;}
+        .footer__menu-media{padding: 0 22px 0 16px;}
+        .footer__menu-document-media{padding: 17px 21px;}
+        .footer__menu-contacts-media .footer-nav-tel
+        {
+            padding: 23px 45px;
+            background-position: 21px 24px;
+        }
+        .footer-nav-email
+        {
+            padding: 16px 47px;
+            background-position: 21px 19px;
+        }
+        .footer__nav-addres
+        {
+            padding: 23px 20px 23px 44px;
+            background-position: 20px 23px;
+        }
+        .footer__nav-publish
+        {
+            margin: 0;
+            padding: 17px 20px;
+        }
+    }
 }
 </style>

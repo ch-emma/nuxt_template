@@ -162,7 +162,22 @@
 
     @media (max-width: 768px) {
         .news__item:last-of-type{display: none;}
-        
     }
 
+    @media (max-width: 375px) {
+        .news__item:not(:first-child){display: none;}
+        .news__item:first-child
+        {
+            width: 100%;
+            margin: 0 auto; 
+            padding: 0;
+            border-right: none;
+        }
+
+        .news__item-but{width: 100%;}
+
+        .news__header{padding: 10px 20px;}
+
+        .news__item img {margin-bottom: 20px;}
+    }
 </style>

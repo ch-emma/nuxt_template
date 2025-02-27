@@ -91,5 +91,20 @@
         }
 
         .form__but-subscribe{width: 100%;}
-    }  
+    }
+    
+    @media (max-width: 375px) {
+        .newsletter
+        {
+            margin: 0 10px;
+            padding: 20px 10px;
+            background-position: 65px 18px;
+        }
+        .form__label
+        {
+            max-width: 270px;
+            white-space: normal;
+            line-height: 25px;
+        }
+    }
 </style>

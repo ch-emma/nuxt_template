@@ -104,9 +104,19 @@
                 padding: 10px;
                 gap: 10px;
             }
-
-            
         }
 
+        @media (max-width: 375px) {
+            .widgets
+            {
+                max-width: 100%;
+                margin-bottom: 0;
+            }
+            .widgets__item
+            {
+                padding: 52px 20px 51px 125px;
+                max-width: fit-content;
+            }
+        }
         
 </style>

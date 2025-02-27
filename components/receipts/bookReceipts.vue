@@ -63,7 +63,7 @@
             <div class="vertical-line"></div>
             <div class="books__cell">
                 <img class="receipts__book" src="/public/image/receipts-book -1.jpg" alt="">
-                <p class="popular__book-genre popular__book-genre">Корпоративное право</p>
+                <p class="receipts__book-genre popular__book-genre">Корпоративное право</p>
                 <h4 class="receipts__book-title popular__book-title">Инвестирование: способы, риски, субъекты : монография</h4>
                 <p class="receipts__book-author popular__book-author">Майфат А.В.</p>
                 <p class="receipts__book-price popular__book-price">450 ₽</p>
@@ -153,25 +153,19 @@
 
     .receipts__book-title
     {
-        display: inline-block;
         width: 223px;
-        height: 38px;
+        height: 55px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-bottom: 3px;
     }
-/* 
-    .books__cell:not(:last-child)
-    {
-        position: relative;
-    } */
 
     .vertical-line{
         border-right: 1px solid #1C294D26;
     }
-
-    /* .books__cell:nth-child(4n){border-right: none;}
-    .books__cell:nth-child(4n+1){border-left: none;} */
 
     .books__cell:nth-child(1)::before, .books__cell:nth-child(4)::before
     {
@@ -326,13 +320,14 @@
     }
 
     @media (max-width: 1140px) {
-        .books__cell:last-child{display: none;}        
+        /* .books__cell:last-child{display: none;}         */
     }
 
     @media (max-width: 1024px) {
-        .content{padding: 0 75px; margin: 0 auto;}
+        .receipts{padding: 0 75px; margin: 0 auto;}
 
-        .books__cell:last-of-type, .vertical-line:last-of-type{display: none;}
+        /* .books__cell:last-of-type,  */
+        .vertical-line:last-of-type{display: none;}
 
         .receipts
         {
@@ -348,9 +343,9 @@
             padding: 30px 30px;
             margin: 0 auto;
         }
-
-        .books__cell:nth-last-of-type(3){display: none;}
-        .books__cell:nth-last-of-type(3) + .vertical-line{display: none;}
+/* 
+        .books__cell:nth-of-type(5){display: none;}
+        .books__cell:nth-of-type(5) + .vertical-line{display: none;} */
 
     }
 
@@ -364,12 +359,55 @@
             padding-right: 10px;
         }
         
-        .vertical-line{display: none;}
+        /* .vertical-line{display: none;} */
     }
 
-    @media (max-width: 320px) {
-        .books__cell:nth-of-type(2){display: none;}
-        .books__cell:nth-of-type(2) + .vertical-line{display: none;}
+    @media (max-width: 375px) {
+        .receipts{max-width: 355px;}
+
+        .books__cell:not(:first-child):not(:last-child){display: none;}
+        .books__cell:nth-of-type(3) + .vertical-line{display: none;}
+
+        .books__cell
+        {
+            max-width: 180px;
+            padding: 20px 0;
+        }
+
+        .receipts__head{padding: 6px 0 14px;}
+
+        .receipts__book
+        {
+            max-width: 126px;
+            margin: 0 15px 15px;
+        }
+
+        .receipts__book-title
+        {
+            max-width: 156px;
+            margin-bottom: 11px;
+        }
+
+        .receipts__book-price
+        {
+            margin-bottom: 5px;
+        }
+        .book__rating-evaluation
+        {
+            width: fit-content;
+            padding: 5px 7px;
+        }
+        .book__rating-recommend{padding: 5px 12px;}
+
+        .rating{gap: 5px;}
+
+        .book__cell-buttons button{gap: 5px;}
+
+        .book__cart-btn
+        {
+            padding: 8px 13px;
+            gap: 5px;
+        }
     }
 
 </style>
